@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700'; /* Oxygen Light import */
+@font-face {    /* Liberty D import */
+    font-family: "Liberty D";
+    src: url("fonts/Liberty D.ttf");
+}
+
+.container-fluid {
+    font-family: 'Oxygen';
+}
+
+/* Small Bootstrap overrides */
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    font-family: "Liberty D";
+}
+
+.navbar-title {
+    font-family: "Liberty D";
+    font-size: 1.1em;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.title small {
+    font-family: "Oxygen";
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: #960001;
+}
+
+.item {
+    max-height: 400px;
+}
+
+/* Generic classes (used for more than one element) */
+
+/* Specific classes */
+
+.logo {
+    height: 50px;
+}
+
+/* Media specific class overrides */
+
+.no-select {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
