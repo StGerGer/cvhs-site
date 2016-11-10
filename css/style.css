@@ -1,0 +1,274 @@
+
+@import 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700'; /* Oxygen Light import */
+@font-face {    /* Liberty D import */
+    font-family: "Liberty D";
+    src: url("../fonts/Liberty D.ttf");
+}
+
+
+/* --- COLORS ---
+
+    Red: #960001;
+    Darker Red:
+    Yellow:
+
+*/
+
+/* All the big things that set precedent for the smaller scale classes */
+body {
+    font-size: 16px;    /* This sets default px value. Changing this scales all text on the page. */
+    font-family: 'Oxygen', sans-serif;
+    max-width: 100vw;
+}
+
+/* Small Bootstrap overrides */
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    font-family: "Liberty D";
+}
+
+.navbar-title {
+    font-family: "Liberty D";
+    font-size: 1.1em;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.title small {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: #960001;
+}
+
+.btn-lg {
+    font-weight:300;
+}
+
+.btn {
+    font-size: 1em;
+    margin: 5px;
+}
+
+.item {
+    max-height: 60vh;
+}
+
+.carousel {
+    z-index: 2;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+.carousel-control {
+    transition: 0.2s;
+}
+
+.img-responsive {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Generic classes (used for more than one element) */
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin: 5px;
+}
+
+.add-a-little-margin-top {
+    margin-top:10px;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+.smaller {
+    font-size: 0.7em;
+}
+
+.spread-text {
+    letter-spacing: 2px;
+}
+
+.text-red {
+    color: #960001 !important;
+}
+
+.no-select {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.gray-text {
+    color: #AAA;
+    font-weight: 300;
+}
+
+.larger-text {
+    font-size: 2em;
+}
+
+.darker-bkgd {
+    background-color: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+}
+
+.clickable {
+    cursor: pointer !important;
+}
+
+.link {
+    transition: 0.2s;
+    font-weight: 300;
+    color: #555;
+}
+
+.link:hover {
+    transition: 0.2s;
+    color: #888;
+}
+
+li {
+    list-style-type: none;
+}
+
+.left-border {
+    border-left: 1px solid #CCC;
+}
+
+td {
+    padding: 10px;
+}
+
+.image-container {
+    width: 300px;
+}
+
+.lighter {
+    opacity: 0.6;
+}
+
+/* Specific classes */
+
+.nav li a {
+    font-weight: 300 !important;
+}
+
+a {
+    color: #333;  /* This is the default color, but I want it here to avoid confusion since links are often different colors and in this case probably should be changed. */
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #555;
+    text-decoration: none;
+}
+
+a:active {
+    color: #960001;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #444;
+}
+
+a:focus {
+    transition: 0.2s;
+    text-decoration: none;
+    color: #960001;
+}
+
+.logo {
+    height: 50px;
+}
+
+.lower-body {
+    background-color: #EEE;
+    margin: -5px 10px 10px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+.header {
+    background-color: #FFF;
+}
+
+.circle-logo {
+    background: #960001; /* Just in case */
+    background: radial-gradient(#960001 10%, #690001 100%);
+    width: 300px;
+    height: 300px;
+}
+
+.innerPage {
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.red-rocks {
+    width: 100%;
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("../img/academics/red-rocks.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.red-rocks-text {
+    color: white;
+    font-weight: 300;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    /*position: relative;
+    top: -200px;*/
+}
+
+hr {
+    border-color: #CCC;
+}
+
+p {
+    text-indent: 20px;
+}
+
+/* Media specific class overrides */
+
+@media(max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+    .circle-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
