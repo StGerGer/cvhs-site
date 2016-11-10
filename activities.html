@@ -15,7 +15,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css"> <!-- main style -->
-        <link rel="stylesheet" href="css/simple-sidebar.css">
+        <link rel="stylesheet" href="css/simple-sidebar.css"> <!-- For the sidebar -->
+        <link rel="stylesheet" href="css/academies.css"> <!-- Academies page specific css -->
     </head>
     <body>
         <div class="container-fluid">
@@ -43,13 +44,13 @@
                         </div>
                         <div class="collapse navbar-collapse" id="nav-contents">
                             <ul class="nav navbar-nav">
-                                <li class="active">
+                                <li>
                                     <a href="academics.html" class="no-select clickable">Academics</a>
                                 </li>
                                 <li>
                                     <a href="academies.html" class="no-select clickable">The Academies</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="activities.html" class="no-select clickable">Clubs and Activities</a>
                                 </li>
                             </ul>
@@ -57,25 +58,3 @@
                     </div>
                 </nav>
             </div> <!-- End Header -->
-
-            <!-- Sidebar -->
-            <div id="wrapper" ng-app="academics" ng-controller="academicsCtrl">
-                <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav">
-                        <li class="" ng-repeat="x in pageObjects">
-                            <span class="no-select clickable link" ng-class="{ 'text-red': x.name == currentPage }" ng-click="setPageBody(x.page)"> {{ x.name }} </span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="page-content-wrapper" class="innerPage" bind-html-compile="pageHTML">
-                </div>
-            </div>
-        </div>
-
-        <!-- Angular -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
-        <script src="js/angular-bind-html-compile.min.js"></script>
-        <script src="js/academics.js"></script>
-    </body>
-</html>
