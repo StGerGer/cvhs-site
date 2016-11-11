@@ -16,7 +16,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css"> <!-- main style -->
         <link rel="stylesheet" href="css/simple-sidebar.css"> <!-- For the sidebar -->
-        <link rel="stylesheet" href="css/academies.css"> <!-- Academies page specific css -->
+
     </head>
     <body>
         <div class="container-fluid">
@@ -58,3 +58,41 @@
                     </div>
                 </nav>
             </div> <!-- End Header -->
+            <div id="page-content-wrapper" ng-app="activities" ng-controller="activitiesCtrl">
+                <table class='table'>
+                    <tr>
+                        <th>
+                            Club
+                        </th>
+                        <th>
+                            Sponsor
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Time
+                        </th>
+                    </tr>
+                    <tr ng-repeat="x in clubz">
+                        <td>
+                            {{ x.club }}
+                        </td>
+                        <td>
+                            {{ x.sponsor }}
+                        </td>
+                        <td>
+                            {{ x.email }}
+                        </td>
+                        <td>
+                            {{ x.time }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Angular -->
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+            <script src="js/angular-bind-html-compile.min.js"></script>
+            <script src="js/activities.js"></script>
