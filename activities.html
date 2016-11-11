@@ -71,7 +71,10 @@
                             Email
                         </th>
                         <th>
-                            Time
+                            Location
+                        </th>
+                        <th>
+                            Date/Time
                         </th>
                     </tr>
                     <tr ng-repeat="x in clubz">
@@ -83,6 +86,9 @@
                         </td>
                         <td>
                             {{ x.email }}
+                        </td>
+                        <td>
+                            {{ x.location }}
                         </td>
                         <td>
                             {{ x.time }}
