@@ -40,6 +40,13 @@ body {
     margin-top: 10px;
 }
 
+.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+}
+
 .title small {
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
