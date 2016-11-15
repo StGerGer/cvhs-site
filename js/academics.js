@@ -88,6 +88,19 @@ app.controller("academicsCtrl", function($scope) {
         });
     };
     $scope.setPageBody(""); // Run on load
+
+    if(window.location.href.includes("?") && window.location.href.includes("page=")) {
+        var pageBegin = window.location.href.indexOf("page=")+5;
+        var pageEnd = window.location.href.indexOf("&");
+        if(pageEnd == -1) {
+            console.log(window.location.href.substr(pageBegin));
+            $scope.setPageBody(window.location.href.substr(pageBegin));
+        } else {
+            console.log(pageEnd);
+            console.log(window.location.href.substr(pageBegin, pageEnd));
+            $scope.setPageBody(window.location.href.substr(pageBegin, pageEnd));
+        }
+    }
 });
 
 pageContentObjects = [  // All the pages in academics. The HTML is all in here. This is what you're looking for if you want to make changes to any pages.
