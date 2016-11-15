@@ -1,12 +1,12 @@
 /*
-*   Activities.
+*   Activities. Oh, and clubs.
 */
 
 
 var app = angular.module("activities", ['ngSanitize', 'angular-bind-html-compile'])
 app.controller("activitiesCtrl", function($scope) {
 
-    $scope.clubz = [
+    $scope.clubz = [    // If you add an entry here, it will be added to the clubs page.
         {
             club: 'club',
             sponsor: 'sponsor',

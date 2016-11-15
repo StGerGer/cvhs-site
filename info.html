@@ -13,21 +13,21 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css"> <!-- main style -->
-        <link rel="stylesheet" href="css/simple-sidebar.css"> <!-- For the sidebar -->
-
+        <link rel="stylesheet" href="css/simple-sidebar.css">
     </head>
     <body>
         <div class="container-fluid">
             <div class="header">
-                <a href="index.html">
-                    <h1 class="title hidden-xs no-select clickable">
-                        <img class="logo" src="img/logo.png">
-                        CASTLE VIEW HIGH SCHOOL
-                        <small class="hidden-xs"> Home of the Sabercats </small>
-                    </h1>
-                </a>
+                <h1 class="title hidden-xs no-select">
+                    <img class="logo" src="img/logo.png">
+                    CASTLE VIEW HIGH SCHOOL
+                    <small class="hidden-xs"> Home of the Sabercats </small>
+                </h1>
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="nav-header">
@@ -44,19 +44,19 @@
                         </div>
                         <div class="collapse navbar-collapse" id="nav-contents">
                             <ul class="nav navbar-nav">
-                                <li>
-                                    <a href="academics.html" class="no-select clickable">Academics</a>
+                                <li class="dropdown">
+                                    <a href="academics.html" class="no-select">Academics</a>
                                 </li>
                                 <li>
                                     <a href="academies.html" class="no-select clickable">The Academies</a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="activities.html" class="no-select clickable">Clubs and Activities</a>
                                 </li>
                                 <li>
                                     <a href="http://www.sabercatsports.org" class="no-select clickable">Athletics</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="info.html" class="no-select clickable">Information</a>
                                 </li>
                             </ul>
@@ -64,47 +64,22 @@
                     </div>
                 </nav>
             </div> <!-- End Header -->
-            <div id="page-content-wrapper" class='innerPage' ng-app="activities" ng-controller="activitiesCtrl"> <!-- Don't add activities/clubs here. Go to activities.js -->
-                <table class='table'>
-                    <tr>
-                        <th>
-                            Club
-                        </th>
-                        <th>
-                            Sponsor
-                        </th>
-                        <th>
-                            Email
-                        </th>
-                        <th>
-                            Location
-                        </th>
-                        <th>
-                            Date/Time
-                        </th>
-                    </tr>
-                    <tr ng-repeat="x in clubz">
-                        <td>
-                            {{ x.club }}
-                        </td>
-                        <td>
-                            {{ x.sponsor }}
-                        </td>
-                        <td>
-                            <a href="mailto:{{ x.email }}" target="_top"> {{ x.email }} </a>
-                        </td>
-                        <td>
-                            {{ x.location }}
-                        </td>
-                        <td>
-                            {{ x.time }}
-                        </td>
-                    </tr>
-                </table>
+
+            <div id="wrapper" ng-app="info" ng-controller="infoCtrl">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li ng-repeat="x in pageObjects">
+                            <span class="no-select clickable link" ng-click="setPageBody(x.name)">{{ x.name }}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="page-content-wrapper" class='innerPage' bind-html-compile="pageHTML">
+
+                </div>
             </div>
 
             <!-- Angular -->
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
             <script src="js/angular-bind-html-compile.min.js"></script>
-            <script src="js/clubs_activities.js"></script>
+            <script src="js/info.js"></script>
