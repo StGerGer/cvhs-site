@@ -326,7 +326,7 @@ app.controller("activitiesCtrl", function($scope) {
             time: 'In Class'
         },
         {
-            activity: 'Men\' Select Choir',
+            activity: 'Men\'s Select Choir',
             sponsor: 'Rochelle Walker',
             email: '',
             location: '',
