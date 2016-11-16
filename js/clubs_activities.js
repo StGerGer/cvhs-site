@@ -272,7 +272,7 @@ app.controller("activitiesCtrl", function($scope) {
             email: 'cheri.albers@dcsdk12.org',
             location: 'Room 5000',
             time: 'Mondays, 6:00PM-7:00PM'
-        },
+        }
     ];
 
     $scope.activitiez = [
