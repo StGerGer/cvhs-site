@@ -65,7 +65,11 @@
                 </nav>
             </div> <!-- End Header -->
             <div id="page-content-wrapper" class='innerPage' ng-app="activities" ng-controller="activitiesCtrl"> <!-- Don't add activities/clubs here. Go to activities.js -->
-                <table class='table'>
+                <div class='centered btn-group'>
+                    <button class='centered btn' ng-class="{'btn-primary': showClubs, 'btn-default': !showClubs}" ng-click="showClubs = true;">Clubs</button>
+                    <button class='centered btn' ng-class="{'btn-primary': !showClubs, 'btn-default': showClubs}" ng-click="showClubs = false;">Activities</button>
+                </div>
+                <table class='table' ng-show="showClubs">
                     <tr>
                         <th>
                             Club
@@ -84,6 +88,43 @@
                         </th>
                     </tr>
                     <tr ng-repeat="x in clubz">
+                        <td>
+                            {{ x.club }}
+                        </td>
+                        <td>
+                            {{ x.sponsor }}
+                        </td>
+                        <td>
+                            <a href="mailto:{{ x.email }}" target="_top"> {{ x.email }} </a>
+                        </td>
+                        <td>
+                            {{ x.location }}
+                        </td>
+                        <td>
+                            {{ x.time }}
+                        </td>
+                    </tr>
+                </table>
+
+                <table class='table' ng-show="!showClubs">
+                    <tr>
+                        <th>
+                            Activity
+                        </th>
+                        <th>
+                            Sponsor
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            Date/Time
+                        </th>
+                    </tr>
+                    <tr ng-repeat="x in activitiez">
                         <td>
                             {{ x.club }}
                         </td>

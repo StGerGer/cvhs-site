@@ -56,6 +56,16 @@ body {
     background-color: #960001;
 }
 
+.btn-primary:focus {
+    background-color: #960001;
+    opacity: 0.8;
+}
+
+.btn-primary:hover {
+    background-color: #960001;
+    opacity: 0.8;
+}
+
 .btn-lg {
     font-weight:300;
 }

@@ -6,6 +6,9 @@
 var app = angular.module("activities", ['ngSanitize', 'angular-bind-html-compile'])
 app.controller("activitiesCtrl", function($scope) {
 
+    $scope.showClubs = true;
+    $scope.showActivities = false;
+
     $scope.clubz = [
         {
             club: 'American Sign Language Club',
@@ -194,4 +197,14 @@ app.controller("activitiesCtrl", function($scope) {
             time: 'nah'
         }
     ];
+
+    function showClubs() {
+        $scope.showClubs = true;
+        $scope.showActivities = false;
+    };
+
+    function showActivities() {
+        $scope.showClubs = false;
+        $scope.showActivities = true;
+    }
 });
