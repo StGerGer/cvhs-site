@@ -70,6 +70,13 @@ app.controller("academicsCtrl", function($scope) {
         { name: "Testing", shorter: "Testing", page: "t" }
     ];
 
+    $scope.hrefObjects = [      // Array of objects that for external links
+        { name: 'Library', link: 'http://klstevenson.wixsite.com/castleviewlibrary' },
+        { name: 'Infinite Campus', link: 'https://campus.dcsdk12.org/icprod/portal/icprod.jsp' },
+        { name: 'Internships', link: 'http://stacyhancock.wixsite.com/internship' },
+        { name: 'Naviance', link: 'https://connection.naviance.com/family-connection/auth/login/?hsid=castleview' }
+    ];
+
     $scope.pageHTML;
     $scope.currentPage;
 
@@ -91,7 +98,7 @@ app.controller("academicsCtrl", function($scope) {
 
     if(window.location.href.includes("?") && window.location.href.includes("page=")) {
         var pageBegin = window.location.href.indexOf("page=")+5;
-        
+
         console.log(window.location.href.substr(pageBegin));
         $scope.setPageBody(window.location.href.substr(pageBegin));
     }

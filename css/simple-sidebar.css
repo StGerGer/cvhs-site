@@ -24,13 +24,14 @@
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
+    z-index: 900;
+    position: absolute;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -235px;
     overflow-y: auto;
+    overflow-x:hidden;
     background: #F8F8F8;
     border: 1px solid #E7E7E7;
     border-radius: 5px;
@@ -45,7 +46,7 @@
 }
 
 #page-content-wrapper {
-    width: calc(100% - 15px); /* Suprisingly well supported, even IE has it. http://caniuse.com/calc */
+    width: calc(100% - 15px); /* Surprisingly well supported, even IE has it. http://caniuse.com/calc */
     position: absolute;
     padding: 15px;
     margin: 0 15px 0 15px;
@@ -80,7 +81,7 @@
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    opacity: 0.7;
     background: rgba(255,255,255,0.2);
 }
 

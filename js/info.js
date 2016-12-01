@@ -60,9 +60,10 @@ app.controller("infoCtrl", function($scope) {
 
     var defaultPage = `
     <h2 class='centered'>Welcome to Castle View!</h2> <br> <br>
-    Some statistics: <br>
     we're cool <br>
     so cool <br>
     look at us <br>
     wow`;
+
+    $scope.setPageBody("");
 });

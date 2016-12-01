@@ -16,6 +16,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css"> <!-- main style -->
         <link rel="stylesheet" href="css/simple-sidebar.css">
+        <link rel="stylesheet" href="css/sticky-footer.css">
     </head>
     <body>
         <div class="container-fluid">
@@ -71,6 +72,10 @@
                         <li class="" ng-repeat="x in pageObjects">
                             <span class="no-select clickable link" ng-class="{ 'text-red': x.name == currentPage }" ng-click="setPageBody(x.page)"> {{ x.name }} </span>
                         </li>
+                        <hr />
+                        <li class="" ng-repeat="x in hrefObjects">
+                            <a ng-href="{{ x.link }}" class='no-select clickable link'> {{ x.name }} </a>
+                        </li>
                     </ul>
                 </div>
                 <div id="page-content-wrapper" class="innerPage" bind-html-compile="pageHTML">
@@ -84,4 +89,17 @@
         <script src="js/angular-bind-html-compile.min.js"></script>
         <script src="js/academics.js"></script>
     </body>
+
+    <footer class="footer vertical-center-container hidden-xs">
+        <div class="container-fluid footer-container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p class="centered">
+                        &copy; Castle View Web Team 2016. <a class='lighter' href="mailto:help@castleviewhs.com">help@castleviewhs.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 </html>
